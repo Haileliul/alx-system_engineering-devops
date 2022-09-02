@@ -1,1 +1,2 @@
-This is first readme 
+# it contains basic shell scripts
+...

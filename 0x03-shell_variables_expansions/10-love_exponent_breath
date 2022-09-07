@@ -1,2 +1,2 @@
 #!/bin/bash
-echo u
+echo $POWER/$DIVIDE

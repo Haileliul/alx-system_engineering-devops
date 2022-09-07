@@ -1,2 +1,10 @@
-#!/bin/bash 
-echo u
+#!/bin/bash
+echo 'ibase=2; obase=10; $BINARY' | bc
+
+
+
+
+
+
+
+

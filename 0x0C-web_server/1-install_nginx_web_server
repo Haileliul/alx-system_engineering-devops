@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
-# Script that installs Nginx server on a web server set listing on port 80
-sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install nginx -y
+# Commands to install Nginx on Web-Sever-01
+
+# Updating Packages before making Installations
+sudo apt-get update
+sudo apt-get -y install nginx
+
+# Configuring the Uncomplicated Firewall (UFW) to allow incoming traffic for the Nginx HTTP service
 sudo ufw allow 'Nginx HTTP'
-sudo echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-sudo service nginx restart
+
+# Creating an index.html page
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# Testing Nginx configurations for Syntax errors
+sudo nginx -t
+
+# Restarting Nginx
+sudo service nginx start
